@@ -1,7 +1,5 @@
 ;; -*- lexical-binding: t -*-
 
-(require 'tex)
-
 (use-package auctex
   :hook
   ((LaTeX-mode . LaTeX-math-mode)
