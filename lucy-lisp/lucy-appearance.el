@@ -15,13 +15,13 @@
 	modus-themes-common-palette-overrides
 	'((fringe nil)
 	  (comment magenta-faint))
-	modus-vivendi-tinted-palette-overrides
-	'((bg-mode-line-active bg-green-subtle))
-	modus-operandi-tinted-palette-overrides
-	'((bg-mode-line-active bg-green-intense))
+	modus-vivendi-palette-overrides
+	'((bg-mode-line-active bg-red-subtle))
+	modus-operandi-palette-overrides
+	'((bg-mode-line-active bg-red-intense))
 	modus-themes-to-toggle
-	'(modus-vivendi-tinted modus-operandi-tinted))
-  (load-theme 'modus-vivendi-tinted :no-confirm))
+	'(modus-vivendi modus-operandi))
+  (load-theme 'modus-vivendi :no-confirm))
 
 (use-package minions
   :config
