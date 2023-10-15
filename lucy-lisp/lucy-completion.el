@@ -20,6 +20,9 @@
   :config
   (marginalia-mode t))
 
+(use-package rg)
+(use-package ripgrep)
+
 (use-package consult
   :bind
   (("C-x r b" . consult-bookmark)
