@@ -43,12 +43,12 @@
   (setq x-underline-at-descent-line t)
   (setq fontaine-presets
 	'((regular
-	   :default-family "Iosevka"
+	   :default-family "Iosevka Term"
 	   :default-height 120
 	   :default-weight regular
 	   :variable-pitch-family "Inter")
 	  (presentation
-	   :default-family "Iosevka"
+	   :default-family "Iosevka Term"
 	   :default-height 240
 	   :default-weight regular
 	   :variable-pitch-family "Inter")))
