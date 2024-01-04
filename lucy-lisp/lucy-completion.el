@@ -55,7 +55,7 @@
 
 (use-package company
   :custom
-  (company-idle-delay 0.2)
+  (company-idle-delay 0.5)
   (company-global-modes '(not eshell-mode shell-mode))
   (company-format-margin-function nil)
   (company-quick-access-keys nil)
