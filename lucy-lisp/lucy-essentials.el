@@ -48,6 +48,12 @@
   :config
   (which-key-mode t))
 
+(use-package anzu
+  :config
+  (global-anzu-mode t)
+  (global-set-key [remap query-replace] 'anzu-query-replace)
+  (global-set-key [remap query-replace-regexp] 'anzu-query-replace-regexp))
+
 (use-package envrc
   :defer nil
   :bind ("C-c e" . envrc-command-map)
