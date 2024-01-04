@@ -16,12 +16,13 @@
 	'((fringe nil)
 	  (comment magenta-faint))
 	modus-vivendi-palette-overrides
-	'((bg-mode-line-active bg-red-subtle))
+	'((bg-mode-line-active bg-magenta-subtle)
+	  (bg-main "#101010"))
 	modus-operandi-palette-overrides
-	'((bg-mode-line-active bg-red-intense))
+	'((bg-mode-line-active bg-magenta-intense))
 	modus-themes-to-toggle
 	'(modus-vivendi modus-operandi))
-  (load-theme 'modus-vivendi :no-confirm))
+  (modus-themes-load-vivendi))
 
 (use-package minions
   :config
