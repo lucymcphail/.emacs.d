@@ -24,4 +24,16 @@
   (setq magit-diff-refine-hunk t)
   (require 'magit-repos))
 
+(use-package magit-todos
+  :after magit
+  :config
+  (magit-todos-mode t))
+
+(use-package diff-hl
+  :hook
+  ((magit-pre-refresh . diff-hl-magit-pre-refresh)
+   (magit-post-refresh . diff-hl-magit-post-refresh))
+  :config
+  (global-diff-hl-mode t))
+
 (provide 'lucy-git)
