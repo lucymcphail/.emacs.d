@@ -12,7 +12,6 @@
   (lsp-inlay-hint-enable t)
   (lsp-lens-enable nil)
   :bind (:map lsp-mode-map
-	      ("M-j" . lsp-ui-imenu)
 	      ("M-?" . lsp-find-references)
 	      ("C-c a" . lsp-execute-code-action)
 	      ("C-c r" . lsp-rename))
