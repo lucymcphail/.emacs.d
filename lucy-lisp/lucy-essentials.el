@@ -54,6 +54,18 @@
   (global-set-key [remap query-replace] 'anzu-query-replace)
   (global-set-key [remap query-replace-regexp] 'anzu-query-replace-regexp))
 
+(use-package helpful
+  :bind
+  ("C-h f" . helpful-callable)
+  ("C-h v" . helpful-variable)
+  ("C-h k" . helpful-key)
+  ("C-h x" . helpful-command)
+  ("C-c C-d" . helpful-at-point)
+  ("C-h F" . helpful-function))
+
+(use-package ialign
+  :bind ("C-c i" . ialign))
+
 (use-package envrc
   :defer nil
   :bind ("C-c e" . envrc-command-map)
