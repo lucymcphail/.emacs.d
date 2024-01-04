@@ -44,6 +44,10 @@
 		(lambda (c) (eq c ?<)))
   (electric-pair-mode t))
 
+(use-package which-key
+  :config
+  (which-key-mode t))
+
 (use-package envrc
   :defer nil
   :bind ("C-c e" . envrc-command-map)
