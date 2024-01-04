@@ -55,15 +55,27 @@
 
 (use-package company
   :custom
-  (company-dabbrev-other-buffers t)
-  (company-dabbrev-code-other-buffers t)
-  (company-show-numbers t)
-  (company-minimum-prefix-length 3)
-  (company-dabbrev-downcase nil)
-  (company-dabbrev-ignore-case t)
   (company-idle-delay 0.2)
   (company-global-modes '(not eshell-mode shell-mode))
-  :hook ((text-mode . company-mode)
-	 (prog-mode . company-mode)))
+  (company-format-margin-function nil)
+  (company-quick-access-keys nil)
+  (company-tooltip-minimum-width 40)
+  :bind
+  (:map company-active-map
+	      ("C-n". company-select-next)
+	      ("C-p". company-select-previous)
+	      ("M-<". company-select-first)
+	      ("M->". company-select-last))
+  :config
+  (global-company-mode t))
+
+(use-package company-posframe
+  :hook (company-mode . company-posframe-mode))
+
+(use-package yasnippet
+  :config
+  (yas-reload-all)
+  (add-hook 'prog-mode-hook 'yas-minor-mode)
+  (add-hook 'text-mode-hook 'yas-minor-mode))
 
 (provide 'lucy-completion)

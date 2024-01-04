@@ -31,4 +31,5 @@
 (require 'lucy-org)
 (require 'lucy-tex)
 (require 'lucy-langs)
+(require 'lucy-lsp)
 (require 'lucy-writing)

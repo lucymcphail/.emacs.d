@@ -18,6 +18,16 @@
   (require 'haskell-interactive-mode)
   (require 'haskell-process))
 
+(use-package rustic
+  :custom
+  (lsp-rust-analyzer-max-inlay-hint-length 40)
+  (lsp-rust-analyzer-display-chaining-hints t)
+  (lsp-rust-analyzer-display-closure-return-type-hints t)
+  (lsp-rust-analyzer-display-lifetime-elision-hints-enable "skip_trivial")
+  (lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names nil)
+  (lsp-rust-analyzer-display-parameter-hints t)
+  (lsp-rust-analyzer-display-reborrow-hints nil))
+
 (use-package elisp-slime-nav
   :hook ((emacs-lisp-mode ielm-mode) . elisp-slime-nav-mode))
 
